@@ -1,1 +1,3 @@
-from direct.showbase.ShowBase import ShowBase
+panda3d
+direct
+math
