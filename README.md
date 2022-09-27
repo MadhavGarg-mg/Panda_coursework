@@ -1,4 +1,4 @@
-Portfolio 1
+Project 1 
 ===========
 
 This package is build as a part of the CSC1034: Portfolio-1.
