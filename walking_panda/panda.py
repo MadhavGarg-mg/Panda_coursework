@@ -8,7 +8,7 @@ from direct.actor.Actor import Actor
 class WalkingPanda(ShowBase):
     def __init__(self, no_rotate=False):
         ShowBase.__init__(self)
-
+        self.no_rotate = True
         # Load the environment model.
         self.scene = self.loader.loadModel("models/environment")
         # Reparent the model to render.
@@ -30,8 +30,15 @@ class WalkingPanda(ShowBase):
 
     # Define a procedure to move the camera.
     def spinCameraTask(self, task):
-        angleDegrees = task.time * 6.0
-        angleRadians = angleDegrees * (pi / 180.0)
+
+        if self.no_rotate == False:
+            angleDegrees = task.time * 6.0
+            angleRadians = angleDegrees * (pi / 180.0)
+
+        else:
+            angleDegrees = 0
+            angleRadians = 0
+
         self.camera.setPos(20 * sin(angleRadians), -20.0 * cos(angleRadians), 3)
         self.camera.setHpr(angleDegrees, 0, 0)
         return Task.cont
