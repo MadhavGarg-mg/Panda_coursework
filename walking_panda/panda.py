@@ -6,7 +6,7 @@ from direct.actor.Actor import Actor
 
 
 class WalkingPanda(ShowBase):
-    def __init__(self, no_rotate, scale=2):
+    def __init__(self, no_rotate, scale):
         ShowBase.__init__(self)
         # Load the environment model.
         self.scene = self.loader.loadModel("models/environment")
@@ -14,7 +14,7 @@ class WalkingPanda(ShowBase):
         self.scene.reparentTo(self.render)
         # Apply scale and position transforms on the model.
         self.scene.setScale(0.25, 0.25, 0.25)
-        self.scene.setPos(-8, 42, 0)
+        self.scene.setPos(-5, 42, 0)
 
         # Add the spinCameraTask procedure to the task manager.
         self.taskMgr.add(self.spinCameraTask, "SpinCameraTask")
