@@ -8,12 +8,16 @@ from direct.actor.Actor import Actor
 class WalkingPanda(ShowBase):
     def __init__(self, no_rotate, scale):
         ShowBase.__init__(self)
+
+        self.no_rotate = no_rotate
+
         # Load the environment model.
         self.scene = self.loader.loadModel("models/environment")
         # Reparent the model to render.
         self.scene.reparentTo(self.render)
         # Apply scale and position transforms on the model.
         self.scene.setScale(0.25, 0.25, 0.25)
+
         self.scene.setPos(-5, 42, 0)
 
         # Add the spinCameraTask procedure to the task manager.
@@ -25,10 +29,10 @@ class WalkingPanda(ShowBase):
         self.pandaActor.reparentTo(self.render)
         # Loop its animation.
         self.pandaActor.loop("walk")
-        print(scale)
+
     # Define a procedure to move the camera.
-    def spinCameraTask(self, task, no_rotate=True):
-        if no_rotate == False:
+    def spinCameraTask(self, task):
+        if self.no_rotate == False:
             angleDegrees = task.time * 6.0
             angleRadians = angleDegrees * (pi / 180.0)
         else:

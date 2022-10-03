@@ -1,4 +1,2 @@
 panda3d
 argparse
-math
-direct
