@@ -3,12 +3,17 @@ from math import pi, sin, cos
 from direct.showbase.ShowBase import ShowBase
 from direct.task import Task
 from direct.actor.Actor import Actor
+import simpleaudio as sa
+from time import time, sleep
+
+wave_obj = sa.WaveObject.from_wave_file("panda_power.wav")
+play_obj = wave_obj.play()
+# play_obj.wait_done()
 
 
 class WalkingPanda(ShowBase):
-    def __init__(self, no_rotate, scale):
+    def __init__(self, no_rotate, scale, move_side, move, fly):
         ShowBase.__init__(self)
-
         self.no_rotate = no_rotate
 
         # Load the environment model.
@@ -17,8 +22,7 @@ class WalkingPanda(ShowBase):
         self.scene.reparentTo(self.render)
         # Apply scale and position transforms on the model.
         self.scene.setScale(0.25, 0.25, 0.25)
-
-        self.scene.setPos(-5, 42, 0)
+        self.scene.setPos(-5 + move_side, 42 + move, 0 - fly)
 
         # Add the spinCameraTask procedure to the task manager.
         self.taskMgr.add(self.spinCameraTask, "SpinCameraTask")
