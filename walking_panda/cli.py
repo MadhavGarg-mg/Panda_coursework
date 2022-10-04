@@ -15,3 +15,4 @@ def cli():
 
     walking = panda.WalkingPanda(**vars(args))
     walking.run()
+
