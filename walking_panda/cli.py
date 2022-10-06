@@ -9,7 +9,8 @@ def cli():
     parser.add_argument("--move-side", default=0, help="Move Panda left(positive) or right(negative).", type=float)
     parser.add_argument("--move", default=0, help="Move Panda forward(positive) or behind(negative).", type=float)
     parser.add_argument("--fly", default=0, help="Make the Panda fly.", type=float)
-    # parser.add_argument("--rotate-speed", default=0, help="Make the camera rotate faster.", type=int)
+    parser.add_argument("--rotate-speed", default=1, help="Make the camera rotate faster.", type=int)
+    parser.add_argument("--zoom", default=1, help="Make the camera zoom in or out.", type=float)
 
     args = parser.parse_args()
 

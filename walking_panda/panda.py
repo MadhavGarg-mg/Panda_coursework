@@ -11,9 +11,12 @@ play_obj = wave_obj.play()
 
 
 class WalkingPanda(ShowBase):
-    def __init__(self, no_rotate, scale, move_side, move, fly):
+    def __init__(self, no_rotate, scale, move_side, move, fly, rotate_speed, zoom):
         ShowBase.__init__(self)
+
         self.no_rotate = no_rotate
+        self.rotate_speed = rotate_speed
+        self.zoom = zoom
 
         # Load the environment model.
         self.scene = self.loader.loadModel("models/environment")
@@ -37,12 +40,12 @@ class WalkingPanda(ShowBase):
     # Define a procedure to move the camera.
     def spinCameraTask(self, task):
         if not self.no_rotate:
-            angleDegrees = task.time * 6.0
+            angleDegrees = task.time * 6.0 * self.rotate_speed
             angleRadians = angleDegrees * (pi / 180.0)
         else:
             angleDegrees = 0
             angleRadians = 0
-        self.camera.setPos(20 * sin(angleRadians), -20.0 * cos(angleRadians), 3)
+        self.camera.setPos(20 * 1 / self.zoom * sin(angleRadians), -20.0 * 1 / self.zoom * cos(angleRadians), 3)
         self.camera.setHpr(angleDegrees, 0, 0)
         return Task.cont
 
