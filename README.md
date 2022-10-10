@@ -21,7 +21,7 @@ Type `python walking_panda.py --move=-10` to move the panda behind by 10 units.
 
 Type `python walking_panda.py --fly=5` to make a panda fly by 5 units.
 
-Type `python walking_panda.py --rotate-speed=10` to increase the rotation speed of the camera by 10 times.
+Type `python walking_panda.py --rotate-speed=100` to increase the rotation speed of the camera by 10 times.
 
 Type `python walking_panda.py --rotate-speed=0.5` to decrease the rotation speed of the camera by 2 times.
 
@@ -31,6 +31,8 @@ Type `python walking_panda.py --zoom=1.5` to zoom in or out by 1.5 times.
 
 Type `python walking_panda.py --zoom=0.5` to zoom in or out by 0.5 times.
 
-If you use --no-rotate and --rotate-speed together it will not work as the camera will not rotate so the camera speed
-will be irrelevant. 
+Type `python walking_panda.py --no-walk` to stop the panda from walking.
+
+If you use `python walking_panda.py --no-rotate --rotate-speed=500`, the camera rotate speed will not change
+as the camera will not rotate. 
 
