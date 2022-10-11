@@ -13,7 +13,7 @@ def cli():
     parser.add_argument("--rotate-speed", default=1, help="Make the camera rotate faster.", type=float)
     parser.add_argument("--zoom", default=1, help="Make the camera zoom in or out.", type=float)
     parser.add_argument("--no-walk", help="Makes the panda stop walking.", action="store_true")
-
+    parser.add_argument("--hexagon", help="Makes the panda walk in a hexagon.", action="store_true")
     args = parser.parse_args()
 
     walking = panda.WalkingPanda(**vars(args))
