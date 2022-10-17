@@ -17,7 +17,8 @@ Version Control
 --------------
 Learning about version control has to be one of the most important lessons I took from this project. It also has to be 
 my favorite feature of GitHub I liked version control as it is a very important tool when it comes to coding, previously 
-I have had many days where I change some code and my code starts to bug and I am unable to reach the initial stage, but now using version control I have realized that I could have avoided that by referring to previous versions.
+I have had many days where I change some code and my code starts to bug and I am unable to reach the initial stage, 
+but now using version control I have realized that I could have avoided that by referring to previous versions.
 
 Module - simple audio
 --------------
