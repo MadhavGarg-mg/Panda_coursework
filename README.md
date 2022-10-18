@@ -1,11 +1,12 @@
 CSC1034: Practical 1
-===========
+============
 
 This package is build as a part of the CSC1034: Portfolio-1. 
 
 Type `python walking_panda.py` to see a moving rotating panda.
 
-## Camera Options:
+Camera Options:
+------------
 
 Type `python walking_panda.py --no-rotate` to stop the camera rotating.
 
@@ -22,7 +23,8 @@ Type `python walking_panda.py --zoom=0.5` to zoom in or out by 0.5 times.
 If you use `python walking_panda.py --no-rotate --rotate-speed=500`, the camera rotate speed will not change
 as the camera will not rotate.
 
-## Panda Modifications Options:
+Panda Modifications Options:
+------------
 
 Type `python walking_panda.py --scale=2` this will multiply the size of the panda by 2.
 
@@ -32,7 +34,8 @@ Type `python walking_panda.py --no-walk` to stop the panda from walking.
 
 Type `python walking_panda.py --hexagon` to make the panda walk in a hexagon. 
 
-## Starting Position Options:
+Starting Position Options:
+------------
 
 Type `python walking_panda.py --move-side=10` to move the panda to the left by 10 units.
 
@@ -44,7 +47,8 @@ Type `python walking_panda.py --move=-10` to move the panda behind by 10 units.
 
 Type `python walking_panda.py --fly=5` to make a panda fly by 5 units.
 
-## Multiple Arguments Recommendations:
+Multiple Arguments Recommendations:
+------------
 
 Type `python walking_panda.py --hexagon --scale=2 --no-rotate` to see a big and slow panda walk in a hexagon.
 
