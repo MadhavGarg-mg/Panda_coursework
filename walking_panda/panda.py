@@ -45,26 +45,24 @@ class WalkingPanda(ShowBase):
             self.pandaActor.loop("walk")
 
         if self.hexagon:
-            posInterval0 = self.pandaActor.posInterval(0 * scale, Point3(1.9, 3, 0), startPos=Point3(1.9, 3, 0))
-            posInterval1 = self.pandaActor.posInterval(2 * scale, Point3(-1.9, 3, 0), startPos=Point3(1.9, 3, 0))
-            posInterval2 = self.pandaActor.posInterval(2 * scale, Point3(-3.5, 0, 0), startPos=Point3(-1.9, 3, 0))
-            posInterval3 = self.pandaActor.posInterval(2 * scale, Point3(-1.9, -3, 0), startPos=Point3(-3.5, 0, 0))
-            posInterval4 = self.pandaActor.posInterval(2 * scale, Point3(1.9, -3, 0), startPos=Point3(-1.9, -3, 0))
-            posInterval5 = self.pandaActor.posInterval(2 * scale, Point3(3.5, 0, 0), startPos=Point3(1.9, -3, 0))
-            posInterval6 = self.pandaActor.posInterval(2 * scale, Point3(1.9, 3, 0), startPos=Point3(3.5, 0, 0))
+            move0 = self.pandaActor.posInterval(0 * scale, Point3(1.9, 3, 0), startPos=Point3(1.9, 3, 0))
+            move1 = self.pandaActor.posInterval(2 * scale, Point3(-1.9, 3, 0), startPos=Point3(1.9, 3, 0))
+            move2 = self.pandaActor.posInterval(2 * scale, Point3(-3.5, 0, 0), startPos=Point3(-1.9, 3, 0))
+            move3 = self.pandaActor.posInterval(2 * scale, Point3(-1.9, -3, 0), startPos=Point3(-3.5, 0, 0))
+            move4 = self.pandaActor.posInterval(2 * scale, Point3(1.9, -3, 0), startPos=Point3(-1.9, -3, 0))
+            move5 = self.pandaActor.posInterval(2 * scale, Point3(3.5, 0, 0), startPos=Point3(1.9, -3, 0))
+            move6 = self.pandaActor.posInterval(2 * scale, Point3(1.9, 3, 0), startPos=Point3(3.5, 0, 0))
 
-            hprInterval0 = self.pandaActor.hprInterval(0 * scale, Point3(270, 0, 0), startHpr=Point3(270, 0, 0))
-            hprInterval1 = self.pandaActor.hprInterval(2 * scale, Point3(330, 0, 0), startHpr=Point3(270, 0, 0))
-            hprInterval2 = self.pandaActor.hprInterval(2 * scale, Point3(390, 0, 0), startHpr=Point3(330, 0, 0))
-            hprInterval3 = self.pandaActor.hprInterval(2 * scale, Point3(450, 0, 0), startHpr=Point3(390, 0, 0))
-            hprInterval4 = self.pandaActor.hprInterval(2 * scale, Point3(510, 0, 0), startHpr=Point3(450, 0, 0))
-            hprInterval5 = self.pandaActor.hprInterval(2 * scale, Point3(570, 0, 0), startHpr=Point3(510, 0, 0))
-            hprInterval6 = self.pandaActor.hprInterval(2 * scale, Point3(630, 0, 0), startHpr=Point3(570, 0, 0))
+            turn0 = self.pandaActor.hprInterval(0 * scale, Point3(270, 0, 0), startHpr=Point3(270, 0, 0))
+            turn1 = self.pandaActor.hprInterval(2 * scale, Point3(330, 0, 0), startHpr=Point3(270, 0, 0))
+            turn2 = self.pandaActor.hprInterval(2 * scale, Point3(390, 0, 0), startHpr=Point3(330, 0, 0))
+            turn3 = self.pandaActor.hprInterval(2 * scale, Point3(450, 0, 0), startHpr=Point3(390, 0, 0))
+            turn4 = self.pandaActor.hprInterval(2 * scale, Point3(510, 0, 0), startHpr=Point3(450, 0, 0))
+            turn5 = self.pandaActor.hprInterval(2 * scale, Point3(570, 0, 0), startHpr=Point3(510, 0, 0))
+            turn6 = self.pandaActor.hprInterval(2 * scale, Point3(630, 0, 0), startHpr=Point3(570, 0, 0))
 
-            self.pandaPace = Sequence(posInterval0, hprInterval0, posInterval1, hprInterval1,
-                                      posInterval2, hprInterval2, posInterval3, hprInterval3,
-                                      posInterval4, hprInterval4, posInterval5, hprInterval5,
-                                      posInterval6, hprInterval6, name="pandaPace")  # Gives the panda coordinates.
+            self.pandaPace = Sequence(move0, turn0, move1, turn1, move2, turn2, move3, turn3, move4, turn4,
+                                      move5, turn5, move6, turn6, name="pandaPace")  # Gives the panda coordinates.
             self.pandaPace.loop()  # Loops panda continuously.
 
     # Define a procedure to move the camera.
