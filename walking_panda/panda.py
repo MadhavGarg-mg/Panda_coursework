@@ -3,18 +3,19 @@ from math import pi, sin, cos
 from direct.showbase.ShowBase import ShowBase
 from direct.task import Task
 from direct.actor.Actor import Actor
+
 from direct.interval.IntervalGlobal import Sequence
 from panda3d.core import Point3
 
 import simpleaudio as sa
 
-
+# Add music
 wave_obj = sa.WaveObject.from_wave_file("panda_power.wav")
 play_obj = wave_obj.play()
 
 
 class WalkingPanda(ShowBase):
-    def __init__(self, scale, move_side, move, fly, rotate_speed, zoom, no_walk, hexagon, no_rotate=False):
+    def __init__(self, scale, move_side, move, fly, rotate_speed, zoom, no_walk=False, hexagon=False, no_rotate=False):
         ShowBase.__init__(self)
 
         self.no_rotate = no_rotate
@@ -60,7 +61,6 @@ class WalkingPanda(ShowBase):
             hprInterval5 = self.pandaActor.hprInterval(2 * scale, Point3(570, 0, 0), startHpr=Point3(510, 0, 0))
             hprInterval6 = self.pandaActor.hprInterval(2 * scale, Point3(630, 0, 0), startHpr=Point3(570, 0, 0))
 
-            # Create and play the sequence that coordinates the intervals.
             self.pandaPace = Sequence(posInterval0, hprInterval0, posInterval1, hprInterval1,
                                       posInterval2, hprInterval2, posInterval3, hprInterval3,
                                       posInterval4, hprInterval4, posInterval5, hprInterval5,
