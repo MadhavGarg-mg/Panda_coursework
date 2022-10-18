@@ -54,9 +54,8 @@ Terminal
 --------------
 Before starting this project, I always felt that the terminal was a useless tool for python as I was 
 mostly working in Jupyter notebooks before. 
-Now I have realized that the terminal is an important tool for coding as we can install packages directly
-from the terminal, pass arguments, we can use GitHub directly from the terminal and track the
-progress of our projects.
+Now I have realized that the terminal is an important tool for coding as we can install packages, 
+pass arguments, use GitHub, and track the progress of our projects directly from the terminal.
 
 Conclusion
 --------------
