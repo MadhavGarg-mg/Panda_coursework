@@ -12,7 +12,7 @@ functionalities to explore.
 
 GitHub
 --------------
-I never used GitHub, I only knew that it existed. 
+I never used GitHub; I only knew that it existed. 
 This project gave me an opportunity to learn about GitHub and how important of a tool it is for an 
 aspiring computer scientists.
 As the weeks passed, I became comfortable using GitHub and realised the importance of tracking my progress 
@@ -21,7 +21,7 @@ I am hoping to incorporate it into my personal projects and take advantage of th
 
 Version Control
 --------------
-Version control has become my favorite feature on GitHub.
+Version control has become my favourite feature on GitHub.
 I like version control as it is a vital tool when it comes to coding, previously if I changed some code, 
 and it developed a bug, I was only able to reach the initial stage by using ctrl + Z repeatedly.
 Now, using version control I can avoid that by referring to previous versions directly.
@@ -60,6 +60,6 @@ progress of our projects.
 
 Conclusion
 --------------
-Overall this Project has been tremendously enjoyable and a great learning source not 
-only for python but also for the ways we can use professional tools. I can not wait
+Overall, this Project has been tremendously enjoyable and a great learning source not 
+only for python but also for the ways we can use professional tools. I cannot wait
 to see what we have to do for the next project.
